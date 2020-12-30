@@ -530,9 +530,7 @@ const styles = {
         fontSize: variables.fontSizeLabel,
         fontWeight: '700',
         width: 200,
-        textOverflow: 'ellipsis',
         overflow: 'hidden',
-        whiteSpace: 'nowrap',
     },
 
     sidebarFooterLink: {
