@@ -98,6 +98,9 @@ const styles = {
     width50p: {
         width: '50%',
     },
+    width0: {
+        width: 0,
+    },
 
     flex0: {
         flex: 0,
@@ -527,9 +530,7 @@ const styles = {
         fontSize: variables.fontSizeLabel,
         fontWeight: '700',
         width: 200,
-        textOverflow: 'ellipsis',
         overflow: 'hidden',
-        whiteSpace: 'nowrap',
     },
 
     sidebarFooterLink: {
