@@ -60,7 +60,7 @@ const HeaderView = props => (
                     styles.flexJustifySpaceBetween
                 ]}
                 >
-                    <View style={[styles.flex1]}>
+                    <View style={[styles.flex1, styles.width0]}>
                         <Text numberOfLines={1} style={[styles.navText]}>
                             {props.report.reportName}
                         </Text>

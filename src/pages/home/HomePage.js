@@ -219,6 +219,9 @@ class App extends React.Component {
             ? styles.hamburgerOpenAbsolute : styles.hamburgerOpen;
         const visibility = !this.state.isHamburgerEnabled || this.props.isSidebarShown ? styles.dFlex : styles.dNone;
         const appContentWrapperStyle = !this.state.isHamburgerEnabled ? styles.appContentWrapperLarge : null;
+        const flexDirection = !this.props.isSidebarShown ? styles.flexColumn : styles.flexRow;
+
+
         return (
             <SafeAreaProvider>
                 <CustomStatusBar />
@@ -227,7 +230,7 @@ class App extends React.Component {
                         <View
                             style={[styles.appContentWrapper,
                                 appContentWrapperStyle,
-                                styles.flexRow,
+                                flexDirection,
                                 styles.flex1,
                                 getSafeAreaPadding(insets)
                             ]}

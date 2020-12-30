@@ -98,6 +98,9 @@ const styles = {
     width50p: {
         width: '50%',
     },
+    width0: {
+        width: 0,
+    },
 
     flex0: {
         flex: 0,
