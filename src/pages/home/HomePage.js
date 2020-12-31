@@ -36,6 +36,7 @@ import NetworkConnection from '../../libs/NetworkConnection';
 import CONFIG from '../../CONFIG';
 import CustomStatusBar from '../../components/CustomStatusBar';
 import CONST from '../../CONST';
+import {fetchCountryCodeByRequestIP} from '../../libs/actions/GeoLocation';
 
 const windowSize = Dimensions.get('window');
 
@@ -84,6 +85,8 @@ class App extends React.Component {
         fetchPersonalDetails();
 
         fetchAllReports(true, false, true);
+
+        fetchCountryCodeByRequestIP();
 
         UnreadIndicatorUpdater.listenForReportChanges();
 
@@ -217,7 +220,7 @@ class App extends React.Component {
     render() {
         const hamburgerStyle = this.state.isHamburgerEnabled && this.props.isSidebarShown
             ? styles.hamburgerOpenAbsolute : styles.hamburgerOpen;
-        const visibility = !this.state.isHamburgerEnabled || this.props.isSidebarShown ? styles.dFlex : styles.dNone;
+        const visibility = !this.state.isHamburgerEnabled || this.props.isSidebarShown ? styles.sidebarVisible : styles.sidebarHidden;
         const appContentWrapperStyle = !this.state.isHamburgerEnabled ? styles.appContentWrapperLarge : null;
         const flexDirection = !this.props.isSidebarShown ? styles.flexColumn : styles.flexRow;
 
